@@ -135,16 +135,6 @@ To update your dotfiles:
 
 5. Restart your terminal or run `source ~/.zshrc` to apply the changes.
 
-## Additional Tips
-
-### Git Aliases
-
-To set up a nice `git lg` alias for a prettier log output:
-
-```
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-```
-
 ## Contributing
 
 If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
