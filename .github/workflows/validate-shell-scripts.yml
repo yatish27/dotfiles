@@ -17,3 +17,4 @@ jobs:
         with:
           scandir: "."
           severity: error
+          shell_files: "**/*.sh"
