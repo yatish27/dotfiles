@@ -1,0 +1,6 @@
+aliariff.vscode-erb-beautify
+bradlc.vscode-tailwindcss
+enkia.tokyo-night
+esbenp.prettier-vscode
+sdras.night-owl
+shopify.ruby-lsp
