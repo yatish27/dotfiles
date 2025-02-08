@@ -9,7 +9,7 @@ then
 fi
 
 # Directory for VSCode settings
-VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
+VSCODE_USER_DIR="$HOME/Library/Application Support/Cursor/User"
 
 # Backup existing settings
 if [ -f "$VSCODE_USER_DIR/settings.json" ]; then

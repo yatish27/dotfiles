@@ -1,144 +1,99 @@
-# My Dotfiles
+# Development Environment Setup
 
-This repository contains my personal dotfiles. These configurations help set up a development environment quickly and efficiently.
+This repository contains scripts and configuration files to set up a development environment quickly and consistently.
 
 ## Repository Structure
 
-- `Brewfile`: List of packages and applications to install via Homebrew
-- `git/gitconfig`: Git configuration
-- `zsh/zshrc`: ZSH configuration
-- `zsh/theme/yatish.zsh-theme`: Custom ZSH theme
+- `cursor-setup.sh`: Script to set up Cursor editor configuration
+- `zsh-setup.sh`: Script to set up Zsh configuration
 - `mac-setup.sh`: Script to set macOS preferences
-- `zsh-setup.sh`: Script to set up Zsh, Oh My Zsh, and custom theme
-- `vscode-setup.sh`: Script to set up VSCode settings and extensions
-- `vscode/settings.json`: VSCode settings
-- `vscode/extensions.txt`: List of VSCode extensions to install
-- `LICENSE.md`: MIT License for the project
+- `git/.gitconfig`: Git configuration
+- `gemrc`: Ruby gems configuration
+- `TODO.md`: Planned improvements and features
 
 ## Installation
 
-Follow these steps to install and set up the dotfiles:
+Follow these steps to install and set up the environment:
 
 1. Clone this repository:
 
    ```
-   mkdir -p ~/code && cd ~/code && git clone https://github.com/yatish27/dotfiles.git
+   git clone https://github.com/yatish27/dotfiles.git
+   cd dotfiles
    ```
 
-2. Install Homebrew (if not already installed):
-
-   ```
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
-
-3. Install essential tools and applications using Brewfile:
-
-   ```
-   cd ~/code/dotfiles
-   brew bundle
-   ```
-
-4. Set up Zsh, Oh My Zsh, and custom theme:
+2. Set up your shell environment:
 
    ```
    ./zsh-setup.sh
    ```
 
-5. Install desired languages and tools with asdf:
-
-   ```
-   asdf plugin add nodejs
-   asdf install nodejs latest
-   asdf global nodejs latest
-
-   asdf plugin add ruby
-   asdf install ruby latest
-   asdf global ruby latest
-   ```
-
-6. Set macOS preferences:
+3. Configure macOS settings:
 
    ```
    ./mac-setup.sh
    ```
 
-7. Set up VSCode:
-
-   Make sure you have the `code` command-line tool installed. If not, open VSCode, press Cmd+Shift+P, and run "Shell Command: Install 'code' command in PATH".
-
-   Then run the VSCode setup script:
+4. Set up Cursor editor:
 
    ```
-   ./vscode-setup.sh
+   ./cursor-setup.sh
    ```
 
-   This will copy your settings and install your extensions.
+## Configuration Details
 
-8. Restart your terminal or run `source ~/.zshrc` to apply the changes.
+### Git Configuration
 
-## Customization
+The `.gitconfig` file contains Git aliases and configuration settings. To use it:
 
-Feel free to modify any of the dotfiles to suit your preferences. The main configuration files are:
+```
+cp -f $(pwd)/git/.gitconfig ~/.gitconfig
+```
 
-- Shell Configuration
+Remember to update the gitconfig with your name and email before using.
 
-  - `zsh/zshrc`: ZSH configuration
-  - `zsh/theme/yatish.zsh-theme`: Custom ZSH theme
+### Ruby Gems Configuration
 
-- Git Configuration
+The `gemrc` file configures Ruby gems behavior. To use it:
 
-  - `git/gitconfig`: Git configuration (remember to update with your name and email)
-
-- Package Management
-
-  - `Brewfile`: List of packages and applications to install via Homebrew
-
-- macOS Settings
-
-  - `mac-setup.sh`: Script to set macOS preferences
-
-- VSCode Configuration
-  - `vscode-setup.sh`: Script to set up VSCode settings and extensions
-  - `vscode/settings.json`: VSCode settings
-  - `vscode/extensions.txt`: List of VSCode extensions to install
+```
+cp -f $(pwd)/gemrc ~/.gemrc
+```
 
 ## Updating
 
-To update your dotfiles:
+To update your configurations:
 
-1. Pull the latest changes from the repository:
+1. Pull the latest changes:
 
    ```
-   cd ~/code/dotfiles
    git pull origin main
    ```
 
-2. Copy the updated configuration files:
+2. Re-run any setup scripts that have been updated:
 
    ```
-   cp ~/code/dotfiles/zsh/zshrc ~/.zshrc
-   cp ~/code/dotfiles/git/gitconfig ~/.gitconfig
-   cp ~/code/dotfiles/zsh/theme/yatish.zsh-theme ~/.oh-my-zsh/themes/
+   ./zsh-setup.sh    # if zsh configuration changed
+   ./mac-setup.sh    # if macOS settings changed
+   ./cursor-setup.sh # if cursor settings changed
    ```
 
-3. If there are changes to the Brewfile, run:
-
-   ```
-   brew bundle
-   ```
-
-4. If there are changes to VSCode settings or extensions, run:
-
-   ```
-   ./vscode-setup.sh
-   ```
-
-5. Restart your terminal or run `source ~/.zshrc` to apply the changes.
+3. Restart your terminal to apply any shell-related changes.
 
 ## Contributing
 
-If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
+If you have any suggestions or improvements:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
+
+## TODO
+
+See [TODO.md](TODO.md) for planned improvements and features.
