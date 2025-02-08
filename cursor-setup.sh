@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Check if code command is available
-if ! command -v code &> /dev/null
+if ! command -v cursor &> /dev/null
 then
-    echo "VSCode command line tool is not installed. Please install it first."
+    echo "Cursor command line tool is not installed. Please install it first."
     echo "You can do this by opening VSCode, pressing Cmd+Shift+P, and running 'Shell Command: Install 'code' command in PATH'"
     exit 1
 fi
@@ -17,11 +17,11 @@ if [ -f "$VSCODE_USER_DIR/settings.json" ]; then
 fi
 
 # Copy settings
-cp vscode/settings.json "$VSCODE_USER_DIR/settings.json"
+cp cursor/settings.json "$VSCODE_USER_DIR/settings.json"
 
 # Install extensions
 while read extension; do
-    code --install-extension "$extension"
-done < vscode/extensions.txt
+    cursor --install-extension "$extension"
+done < cursor/extensions.txt
 
-echo "VSCode settings and extensions have been updated."
+echo "Cursor settings and extensions have been updated."

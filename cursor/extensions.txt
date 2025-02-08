@@ -1,0 +1,12 @@
+aliariff.vscode-erb-beautify
+bradlc.vscode-tailwindcss
+enkia.tokyo-night
+esbenp.prettier-vscode
+sdras.night-owl
+shopify.ruby-lsp
+github.vscode-github-actions
+golang.go
+ms-azuretools.vscode-docker
+ms-vscode-remote.remote-containers
+ms-vscode.makefile-tools
+rubocop.vscode-rubocop
