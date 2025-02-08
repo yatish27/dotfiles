@@ -26,6 +26,10 @@ cask "obsidian"
 cask "whatsapp"
 cask "pearcleaner"
 cask "cork"
+cask "zoom"
+cask "discord"
+cask "orbstack"
+cask "docker"
 
 # Fonts
 cask "font-cascadia-mono"

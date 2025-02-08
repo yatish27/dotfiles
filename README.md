@@ -60,6 +60,14 @@ The `gemrc` file configures Ruby gems behavior. To use it:
 cp -f $(pwd)/gemrc ~/.gemrc
 ```
 
+### RuboCop Configuration
+
+The `rubocop.yml` file contains the configuration for RuboCop, a Ruby static code analyzer. To use it:
+
+```
+cp -f $(pwd)/rubocop.yml ~/.rubocop.yml
+```
+
 ## Updating
 
 To update your configurations:
