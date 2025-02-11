@@ -10,7 +10,7 @@ brew "curl"
 brew "jemalloc"
 brew "rust"
 brew "doctl"
-brew "postgresql@15"
+brew "postgresql@17"
 brew "vips"
 brew "libpq"
 
