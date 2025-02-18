@@ -16,5 +16,7 @@ export RUBY_CONFIGURE_OPTS=--enable-yjit
 # Initialize mise (previously rtx) for version management
 mise activate fish | source
 
+fzf --fish | source
+
 # PostgreSQL path configuration
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"

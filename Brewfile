@@ -15,6 +15,7 @@ brew "postgresql@17"
 brew "rust"
 brew "vips"
 brew "wget"
+brew "fzf"
 
 # Cask applications
 cask "1password"
