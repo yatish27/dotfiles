@@ -4,7 +4,7 @@
 
 # Set a faster key repeat rate
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+defaults write -g KeyRepeat -int 1         # normal minimum is 2 (30 ms)
 
 # Show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles YES
@@ -61,5 +61,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Disable smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
-echo "macOS settings updated. Some changes may require a logout/restart to take effect."
+# Disable the auto-hide Dock delay
+defaults write com.apple.Dock autohide-delay -float 0;
 
+echo "macOS settings updated. Some changes may require a logout/restart to take effect."
