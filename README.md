@@ -5,11 +5,9 @@ This repository contains scripts and configuration files to set up a development
 ## Repository Structure
 
 - `cursor-setup.sh`: Script to set up Cursor editor configuration
-- `zsh-setup.sh`: Script to set up Zsh configuration
 - `mac-setup.sh`: Script to set macOS preferences
 - `git/.gitconfig`: Git configuration
 - `gemrc`: Ruby gems configuration
-- `TODO.md`: Planned improvements and features
 
 ## Installation
 
@@ -22,19 +20,13 @@ Follow these steps to install and set up the environment:
    cd dotfiles
    ```
 
-2. Set up your shell environment:
-
-   ```
-   ./zsh-setup.sh
-   ```
-
-3. Configure macOS settings:
+2. Configure macOS settings:
 
    ```
    ./mac-setup.sh
    ```
 
-4. Set up Cursor editor:
+3. Set up Cursor editor:
 
    ```
    ./cursor-setup.sh
@@ -81,7 +73,6 @@ To update your configurations:
 2. Re-run any setup scripts that have been updated:
 
    ```
-   ./zsh-setup.sh    # if zsh configuration changed
    ./mac-setup.sh    # if macOS settings changed
    ./cursor-setup.sh # if cursor settings changed
    ```
@@ -97,10 +88,6 @@ If you have any suggestions or improvements:
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## License
-
-This project is open source and available under the MIT License.
 
 ## TODO
 
